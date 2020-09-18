@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+:root {
+  scroll-behavior: smooth;
+  --dark-surface: #121212;
+  --dark-primary: #000000;
+  --dark-border: #cf6679;
+  --dark-text: #fff;
+  --dark-text-hover: rgba(255, 255, 255, 0.801);
+  --light-surface: #ffffffda;
+  --light-primary: #ffffff;
+  --light-border: #b00020;
+  --light-text: #000000;
+  --light-text-hover: #000000c0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.dark {
+  --surface: #121212;
+  --primary: #000000;
+  --text: var(--dark-text);
+  --border: var(--dark-border);
+  --background: var(--dark-surface);
+  --hover: var(--dark-text-hover);
+}
+
+.light {
+  --surface: #d8cfcfda;
+  --primary: #ffffff;
+  --text: var(--light-text);
+  --border: var(--light-border);
+  --background: var(--light-surface);
+  --hover: var(--light-text-hover);
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  -webkit-transition: background 0.5s ease-in-out, color 1s ease-in-out;
+  transition: background 0.5s ease-in-out, color 1s ease-in-out;
+}
+
+.navbar {
+  height: 70px;
+  background: -webkit-gradient(linear, left top, right top, from(var(--surface)), to(var(--primary)));
+  background: linear-gradient(to right, var(--surface), var(--primary));
+  color: var(--text);
+}
+
+.navbar .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.navbar .navbar-nav .include-dropdown:focus-within .dropdown {
+  opacity: 1;
+}
+
+.navbar .navbar-nav .dropdown {
+  border-top: 4px solid var(--border);
+  background: var(--background);
+  width: 180px;
+  height: 30px;
+  padding: 20px;
+  font-weight: bold;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
+  margin-top: 1.5rem;
+  z-index: 2;
+  opacity: 0;
+  -webkit-box-shadow: 0 1px 2px 2px var(--primary);
+          box-shadow: 0 1px 2px 2px var(--primary);
+}
+
+.navbar .navbar-nav .dropdown .nav-item {
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.navbar .navbar-nav .dropdown .nav-item:hover {
+  color: var(--hover);
+}
+
+.navbar .navbar-nav .dropdown .dropdown-item {
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-nav .dropdown {
+    width: 150px;
+  }
+}
+
+span {
+  color: var(--border);
+}
+
+.dropdown-item:hover {
+  color: var(--hover) !important;
+}
+
+#home {
+  background: -webkit-gradient(linear, left top, right top, from(var(--surface)), to(var(--primary)));
+  background: linear-gradient(to right, var(--surface), var(--primary));
+  text-align: center;
+  padding: 5rem 0;
+  color: var(--text);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
+}
+
+#home img {
+  max-width: 200px;
+}
+
+#projects {
+  color: var(--text);
+  text-align: center;
+}
+
+#projects h1 {
+  padding: 3rem 0;
+}
+
+#projects .project-container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+  -ms-grid-columns: (minmax(330px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  justify-items: center;
+  padding-bottom: 3rem;
+}
+
+#projects .project-container a {
+  width: 330px;
+  background-color: var(--border);
+}
+
+#projects img {
+  max-width: 330px;
+}
+
+.footer {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(var(--surface)), to(var(--primary)));
+  background: linear-gradient(to right, var(--surface), var(--primary));
+  height: 70px;
+  line-height: 70px;
+}
+/*# sourceMappingURL=style.css.map */
