@@ -177,6 +177,91 @@ span {
   width: 330px;
   background: -webkit-gradient(linear, left top, right top, from(var(--surface)), to(var(--primary)));
   background: linear-gradient(to right, var(--surface), var(--primary));
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#projects .project-container a:hover {
+  -webkit-box-shadow: 0px 0px 8px 1px #000;
+          box-shadow: 0px 0px 8px 1px #000;
+  -webkit-transform: translate3d(0, -10px, 0);
+          transform: translate3d(0, -10px, 0);
+}
+
+#projects .project-container .project-detail {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  color: #fff;
+  z-index: 3;
+  top: 0;
+  right: 0;
+}
+
+#projects .project-container .project-detail:target {
+  left: 0;
+  bottom: 0;
+}
+
+#projects .project-container .project-detail .close {
+  position: absolute;
+  margin-left: -24px;
+  width: inherit;
+  background: initial;
+  top: 1rem;
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--border);
+          text-decoration-color: var(--border);
+  text-decoration-thickness: 3px;
+  font-weight: bold;
+}
+
+#projects .project-container .project-detail .close:hover {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#projects .project-container .project-detail img {
+  position: absolute;
+  margin-left: -165px;
+  top: 5rem;
+}
+
+#projects .project-container .project-detail h5 {
+  position: absolute;
+  margin-left: calc(50% - 0.8rem);
+  top: 13.8rem;
+}
+
+#projects .project-container .project-detail p {
+  position: absolute;
+  top: 17rem;
+  padding: 0 4rem;
+  overflow-y: auto;
+  display: block;
+  height: 20rem;
+  overflow-y: auto;
+}
+
+#projects .project-container .project-detail .project-link {
+  position: absolute;
+  margin-left: calc(50% - 9rem);
+  top: 90%;
+}
+
+#projects .project-container .project-detail .project-link a {
+  padding: 0 10px;
+  width: inherit;
+  background: initial;
+}
+
+#projects .project-container .project-detail .project-link a:hover {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #projects img {
