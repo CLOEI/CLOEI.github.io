@@ -299,6 +299,8 @@ span {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #000;
+  z-index: 4;
+  overflow: none;
 }
 
 .intro .hide {

@@ -232,6 +232,9 @@ span {
   flex-direction: column;
   justify-content: center;
   background-color: #000;
+  // idk why animation broke when i deploy. if this doesnt work well i will try my best to fix it
+  z-index: 4;
+  overflow: none;
   .hide {
     position: absolute;
     width: 30rem;
