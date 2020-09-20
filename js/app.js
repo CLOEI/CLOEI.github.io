@@ -2,6 +2,8 @@ const darkToggle = document.querySelector(".dark-toggle");
 const lightToggle = document.querySelector(".light-toggle");
 const body = document.body;
 const theme = localStorage.getItem("theme");
+const firstTime = localStorage.getItem("first");
+const tl = gsap.timeline({ defaults: { duration: 1 } });
 
 if (theme) {
   body.classList.replace("dark", theme);
@@ -16,3 +18,15 @@ lightToggle.addEventListener("click", (e) => {
   body.classList.replace("dark", "light");
   localStorage.setItem("theme", "light");
 });
+
+tl.to(".hide", { duration: 1.5, y: 100 });
+tl.to(".hide", { duration: 1.5, y: -50 });
+tl.to(".intro", { duration: 3, y: -1000 }, "-=.3");
+
+// if (!firstTime) {
+//   tl.to(".hide", { duration: 1.5, y: 100 });
+//   tl.to(".hide", { duration: 1, y: -50 });
+//   tl.to(".intro", { duration: 3, y: -1000 });
+//   localStorage.setItem("first", false);
+// }
+// tl.to(".intro", { duration: 5, y: -1000 });
