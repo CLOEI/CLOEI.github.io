@@ -19,9 +19,12 @@ lightToggle.addEventListener("click", (e) => {
   localStorage.setItem("theme", "light");
 });
 
-tl.to(".hide", { duration: 1.5, y: 100 });
-tl.to(".hide", { duration: 1.5, y: -50 });
-tl.to(".intro", { duration: 3, y: -1000 }, "-=.3");
+// Probably i will use JQUERY to simplifie things hehe
+
+tl.to(".hide", { duration: 1.5, y: 50 });
+tl.to(".hide", { duration: 1, y: 100 });
+tl.to(".hide", { duration: 1.5, y: -50 }, "+=1");
+tl.to(".intro", { duration: 3, y: "-100%" }, "-=.3");
 
 // if (!firstTime) {
 //   tl.to(".hide", { duration: 1.5, y: 100 });

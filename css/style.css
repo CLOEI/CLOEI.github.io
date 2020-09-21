@@ -154,6 +154,33 @@ span {
   max-width: 200px;
 }
 
+#home img:hover {
+  -webkit-animation: color 5s infinite;
+          animation: color 5s infinite;
+}
+
+@-webkit-keyframes color {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(180deg);
+            filter: hue-rotate(180deg);
+  }
+}
+
+@keyframes color {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(180deg);
+            filter: hue-rotate(180deg);
+  }
+}
+
 #projects {
   color: var(--text);
   text-align: center;
@@ -245,6 +272,7 @@ span {
   display: block;
   height: 45%;
   overflow-y: auto;
+  text-align: justify;
 }
 
 #projects .project-container .project-detail .project-link {
@@ -307,7 +335,6 @@ span {
   position: absolute;
   width: 30rem;
   height: 10rem;
-  background-color: transparent;
   background-color: #000;
 }
 
